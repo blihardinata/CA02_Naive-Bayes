@@ -22,7 +22,7 @@ GaussianNB: to build a feature matrix using the Naive Bayes Theorem calculation
 *from sklearn.metrics import accuracy_score*
 accuracy_score: to predict how accurate the model is
 
-### **Step 1: Create a function to build dictionary of the most common 3000 words from the email content. **
+### Step 1: Create a function to build dictionary of the most common 3000 words from the email content.
 - Create a function called **build_Dictionary()** to add all words and characters into **dictionary**
 - os.path.join is used to create a list of emails
 - line.split() is used to split a sentence into a list of **words**
