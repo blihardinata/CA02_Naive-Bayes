@@ -45,7 +45,7 @@ Example of print(filepath): ['', 'content', 'drive', 'MyDrive', 'MSBA_Colab_2020
 - Therefore, for every filename starting with "spmsg", the numbers of **count** and **fileID** are increased by one respectively. 
 
 
-### **Step 3: Testing, training and predicting the accuracy rate of the model (or functions) performance ** 
+### Step 3: Testing, training and predicting the accuracy rate of the model (or functions) performance 
 - The first four lines of code is used to test the function in the Step 1 and the Step 2. 
 - We use extract_feature function to save both training and test folders into the corresponding matrix. 
 - The model uses gaussianNB assuming that the features follow a normal distribution characteristics.
