@@ -25,10 +25,10 @@ accuracy_score: to predict how accurate the model is
 ### **Step 1: Create a function to build dictionary of most common 3000 words from all the email content. **
 - Create a function called **build_Dictionary()** to add all words and characters into the dictionary
 - os.path.join is used to create a list of emails
-- line.split() is used to split all sentence into a collection of *words*
-- Therefore, dictionary contains all words from *content* including stop words. Hence, I named this list as *junk*
+- line.split() is used to split all sentence into a collection of **words**
+- Therefore, dictionary contains all words from **content** including stop words. Hence, I named this list as **junk**
 - Non-alpha-numeric such as + : , and words with one alphabet such as a, I, U need to be removed to improve accuracy rate.  
-- Once all non-alpha-numeric and one-alphabet words are removed, save the 3000 most common words under a list called *dictionary*
+- Once all non-alpha-numeric and one-alphabet words are removed, save the 3000 most common words under a list called **dictionary**
 
 The returned value of print(dictionary) is:
 [('order', 1414), ('address', 1299), ('report', 1217), ('mail', 1133), ('language', 1099), ('send', 1080), ('email', 1066)....
@@ -36,13 +36,13 @@ The returned value of print(dictionary) is:
 ### **Step 2: Create a function to extract features then build a feature matrix by analyzing the file path and name as well as the content of each email. This function uses naming conventions to separate spam Emails from non-spam Emails** 
 - Create a function called **extract_features** to separate spam email from non-spam emails 
 - features_matrix is a matrix of total number of files in either training or testing folders along with the 3000 most common words
-- For every document or (doc), we label the sentence with index, split the sentence and save the list of words under *words*
-- Please note: *doc* is a filepath name. Since we need to filter out spam from non-spam based on naming convention, we split the path as a collection of words and save under *filepath*
+- For every document or (**doc**), we label the sentence with index, split the sentence and save the list of words under **words**
+- Please note: **doc** is a filepath name. Since we need to filter out spam from non-spam based on naming convention, we split the path as a collection of words and save under *filepath*
 
 Example of print(filepath): ['', 'content', 'drive', 'MyDrive', 'MSBA_Colab_2020', 'ML Algorithms', 'CA02', 'train-mails', 'spmsga10.txt']
 
-- Spam email is categorized with filename starting with "spmsg". Hence, we are saving the last word in filepath as *filename*
-- Therefore, for every filename starts with "spmsg", the number of count and fileID is increased by one respectively. 
+- Spam email is categorized with filename starting with "spmsg". Hence, we are saving the last word in filepath as **filename**
+- Therefore, for every filename starts with "spmsg", the number of **count** and **fileID** is increased by one respectively. 
 
 
 ### **Step 3: Testing, training and predicting the accuracy rate of the model (or functions) performance ** 
